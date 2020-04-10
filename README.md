@@ -1,6 +1,12 @@
 # UNC Coronavirus Social Distancing Evaluation and Messaging in North Carolina
 
-To support health authorities' public health messaging, we are generating demographically targeted messages on the importance of social distancing. 
+To support health authorities' public health messaging, we are generating demographically targeted messages on the importance of social distancing. The 5-step process envisioned is:
+
+1. Demographic evaluation of social distancing
+2. Initial Messsage Resonnance Testing
+3. Develop Communication Assets
+4. Field Test Prototype Messages
+5. Full Rendering of Final Messages
 
 ----
 
