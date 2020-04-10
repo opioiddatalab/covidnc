@@ -41,6 +41,7 @@ Based on the county-level analysis above, we will identify candidate profiles of
 <br>
 The outputs from these analyses will be used to develop and test messages tailored to audience segmentation.<br>
 <br>
+
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
 These results are based on an mTurk survey fielded on April 8, 2020.<br>
@@ -63,14 +64,17 @@ These results are based on an mTurk survey fielded on April 8, 2020.<br>
 3. Breathing problems
 Sub-group analyses reported similar results among key populations.
 <br>
+
 # 3. Develop Communication Assets
 *Create demographically targeted protorype communications to encourage socail distancing.*<br>
 We will generate test messages and visuals using creative teams at UNC, a professional illustrator in Durham, and corporate entertainment industry volunteers. For example, information on television viewing by demographic could be used to build a visual vocabulary and culturally relevant frames to target social distancing to demographic groups.
 <br>
+
 # 4. Field Test Prototype Messages
 *Use mTurk to evaluate responses to social distancing prototypes.*<br>
 Test saliency and resonnance of the prototypes, segmented by demographics.
 <br>
+
 # 5. Full Rendering of Final Messages
 *Finalize social distancing assets based on field testing.*<br>
 Output will be optimized based on dissemination channels, including resizing, formatting, etc. Social media, print flyers, and other formats will be considered.<br>
