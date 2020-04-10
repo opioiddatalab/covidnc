@@ -49,7 +49,7 @@ The outputs from these analyses will be used to develop and test messages tailor
 <br>
 
 ## Preliminary analyses
-Social distancing as measured by cell phone mobility changes from baseline (February 17 to March 7, 2020) through April 7, 2020.
+Social distancing as measured by percent change in cell phone mobility changes from baseline (February 17 to March 7, 2020) through April 7, 2020.
 ![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_cellmobility_line.png)
 
 # 2. Initial Messsage Resonnance Testing
