@@ -48,6 +48,10 @@ Based on the county-level analysis above, we will identify candidate profiles of
 The outputs from these analyses will be used to develop and test messages tailored to audience segmentation.<br>
 <br>
 
+## Preliminary analyses
+Social distancing as measured by cell phone mobility changes from baseline (February 17 to March 7, 2020) through April 7, 2020.
+![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_cellmobility_line.png)
+
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
 These results are based on an mTurk survey fielded on April 8, 2020.<br>
