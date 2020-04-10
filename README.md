@@ -61,9 +61,9 @@ These results are based on an mTurk survey fielded on April 8, 2020.<br>
 4. Social distancing keeps me safe
 5. I don't want to give the virus to anyone
 6. Social distancing lessens the overflow at hospitals
-
 <br>Sub-group analyses reported similar results, with only notable differences for young participants, ages 18-24 (n=10). The top reason among participants ages 18-24 was “Social distancing keeps our healthcare workers safe.” This reason also resonated with Black/African American and rural participants. Additional reasons among young adults were “Social distancing will prevent my community from being at risk” and “I want to protect people who are vulnerable.
 <br>
+
 **Most Worrisome Effects of COVID-19**
 1. Being in an Intensive Care Unit (ICU)
 2. Being hospitalized
