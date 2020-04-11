@@ -60,9 +60,24 @@ save rucc, replace
 			la var last3_m50 "3-day moving average of median km traveled for last 3 weekdays"
 			la var last3_sample "Number of cell trace sample during last 3 weekdays"
 			la var last3_pctchange "Avg % change in median mobility since baseline (17Feb-07Mar) for last 3 weekdays"
+			
+	program define quintile
+	
+	xtile temp = trend, nq(5)
+		gen iso5=.
+		 replace iso5=1 if temp==5
+			replace iso5=2 if temp==4
+				replace iso5=3 if temp==3
+					replace iso5=4 if temp==2
+						replace iso5=5 if temp==1
+							order iso5, a(trend)
+								la var iso5 "Social Distancing: Lowest (1) to Highest (5)"
+									drop temp
+end
 
-export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", delimiter(tab) replace
+	export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", delimiter(tab) replace
 
+	frame put all, into(master)
 
 // Import Google check-in data
 	clear
