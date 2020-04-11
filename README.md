@@ -17,9 +17,10 @@ We are using cell phone tower mobility data as a proxy for social distancing. [D
 ## National Data
 Based on a national analysis conducted at UNC, we found that counties that were the fastest to implement social distancing were healthier and wealthier. We conclude that economic considerations should be considered in social distancing messaging.<br>
 
-**Abstract** ([details](https://opioiddatalab.github.io/covid/locationcovid.html))<br>
-Fast-tracked and out for review at *New England Journal of Medicine*
+**ABSTRACT** ([details](https://opioiddatalab.github.io/covid/locationcovid.html))<br>
+Fast-tracked and out for review at *New England Journal of Medicine*<br>
 <br>
+**Introduction**<br>
 Faced with a pandemic caused by a novel coronavirus, social distancing became a normative countermeasure in March 2020, which may be measured using aggregate mobile phone data. We explored if healthier and wealthier places were more successful at implementing social distancing.<br>
 **Methods**<br>
 We used smartphone GPS positioning data to quantify social distancing in 2,507 counties in the United States, from March 2 to March 20, 2020. Social distancing was modeled as 5-level quintiles. Linkage to eight healthcare and economic indicators at the county level allowed us to evaluate associations with the intensity of social distancing as measured by smartphone GPS movement. <br>
