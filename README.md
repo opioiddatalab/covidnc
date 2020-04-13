@@ -53,7 +53,7 @@ The outputs from these analyses will be used to develop and test messages tailor
 
 ## Preliminary analyses
 Social distancing as measured by percent change in cell phone mobility changes from baseline (February 17 to March 7, 2020) through the last available data (usually ~2 days ago).
-![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_cellmobility_line.png)
+![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_mobility_change.png)
 
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
