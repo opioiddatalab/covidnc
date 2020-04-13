@@ -35,11 +35,7 @@ Healthier and wealthier areas appeared to be more successful at implementing soc
 
 ## NC County Analysis
 **Data Sources**<br>
-In this county-level analysis we will merge data from:
-1. Cell phone mobility data (updated daily with a 2-day lag) as proxy for overall social distancing (Courtesy Decartes Labs)
-2. Google changes in check-in data (Feb 16-March 29) by type of location (e.g., work, transit, etc.)
-3. County demographic profiles from American Community Survey and Census and [RWJF County Health Rankings](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2020_2.pdf)
-<br>We are in the process of merging and creating the master dataset.
+In this county-level analysis we will use data from cell phone tower mobility data as proxy for overall social distancing (Courtesy Decartes Labs), and Google location services data by type of location (e.g., work, transit, etc.). Additional data from socioeconomic and transportation sources are being added. [Click here](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md) for methods, data, and code.
 
 **Analysis plan**<br>
 We will first identify NC counties with lower social distancing intensity, measured as both: 1) change from baseline, and 2) total mobility. Adjustments for county-level confounders will also be considered. We will also generate county-level demographic profiles for lower social distancing areas.
