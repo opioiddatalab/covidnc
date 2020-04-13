@@ -4,28 +4,34 @@ cd "/Users/nabarun/Documents/GitHub/covidnc/data"
 
 // Process Google app check-in data
 clear
-import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/google_mobility-2020-03-29.csv" 
+import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/export-2020-04-05.csv" 
 	
 	drop v1
-	
-	ds, has(type numeric)
-	
+		
+	* Convert proportions to percents 
+	ds, has(type numeric)	
 	foreach var of varlist `r(varlist)'  {
 		replace `var'=`var'*100
 		}
-	
-	rename subunit_name county
-		order county, a(date)
-			rename date dateoriginal
-				gen googledate=date(dateoriginal, "YMD")
-					format googledate %td
-						order googledate, first
-							drop dateoriginal
+
+	* Format date and retain latest data
+		rename subunit_name county
+			order county, a(report_date)
+				replace report_date=substr(report_date,1,10)
+					gen googledate=date(report_date, "YMD")
+						format googledate %td
+							order googledate, first
+								drop report_date
+		
+		su googledate 
+			local latest: disp %td r(max)
+				di "Keeping only records in Google mobility scrape from `latest'"
+					keep if googledate==r(max)
 		
 	keep if unit_name=="North Carolina"
-		drop unit_name
+		drop unit*
 		
-	save ncgoogle_mobility-2020-03-29, replace
+	save ncgoogle_mobility, replace
 		
 // Import cell tower mobility data
 	clear
@@ -59,10 +65,10 @@ import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/google_mobility-2
 		la var m50 "Median daily distance traveled (km)"
 		la var m50_index "Median % reduction in mobility since March 7, 2020"
 		la var date "Dates: `earliest' to `latest'"
-		line m50_index date, by(county) note("Baseline: Feb 17 to March 7, 2020")
-			graph export "/Users/nabarun/Documents/GitHub/covidnc/docs/nc_mobility_km.png", as(png) name("Graph") replace
-		line m50 date, by(county) 
-			graph export "/Users/nabarun/Documents/GitHub/covidnc/docs/nc_mobility_change.png", as(png) name("Graph") replace
+*		line m50_index date, by(county) note("Baseline: Feb 17 to March 7, 2020")
+*			graph export "/Users/nabarun/Documents/GitHub/covidnc/docs/nc_mobility_km.png", as(png) name("Graph") replace
+*		line m50 date, by(county) 
+*			graph export "/Users/nabarun/Documents/GitHub/covidnc/docs/nc_mobility_change.png", as(png) name("Graph") replace
 
 	* Short county name
 			gen shortcounty=county
@@ -84,9 +90,16 @@ import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/google_mobility-2
 			note last3_pctchange: Baseline 17Feb to 07Mar; % change since then until last 3 weekdays
 			
 	* Merge in Google data
-		merge 1:1 county using ncgoogle_mobility-2020-03-29, keep(1 3) nogen
-			drop unit*
+		merge 1:1 county using ncgoogle_mobility, keep(1 3) nogen
+
+	* Sample size
+		qui: su last3_sample
+			local sample3=r(sum)
+			di "Total samples in last 3 days: `sample3'" 
+			di "Samples per day:"
+			di `sample3'/3
 			
+		
 	* Merge in RUCC data
 	*	merge 1:1 fips using rucc, keep(1) nogen
 
