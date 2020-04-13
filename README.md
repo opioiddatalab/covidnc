@@ -56,7 +56,7 @@ See our [data, code, and methods](https://github.com/opioiddatalab/covidnc/blob/
 ### NC Rank Tables
 Check out the [interactive tables](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/ComparingQuintilesbyCounty-Updated413/Dashboard2)
 <br>
-![preliminarytable](https://opioiddatalab.github.io/covidnc/ncmobilitytable.png)
+![table](https://opioiddatalab.github.io/covidnc/ncmobilitytable.png)
 
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
