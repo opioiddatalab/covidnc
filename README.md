@@ -11,7 +11,9 @@ To support health authorities' public health messaging, we are generating demogr
 ----
 
 # 1. Demographic evaluation of social distancing
-*Conduct a county-level analysis of NC counties to identify intensity of social distancing.*
+*Conduct a county-level analysis of NC counties to identify intensity of social distancing.*<br>
+Analyses by: Nabarun Dasgupta, Allison Lazard, Katherine Gora Combs<br>
+<br>
 We are using cell phone tower mobility data as a proxy for social distancing. [Data](https://github.com/descarteslabs/DL-COVID-19) are provided by Decartes Labs (Santa Fe, NM), based on [this methodology](https://www.descarteslabs.com/wp-content/uploads/2020/03/mobility-v097.pdf). An example analysis was published on March 23, 2020 in *The New York Times*. These data are aggregated at the county level, so while we can compare general demographics, we would ideally also have more stratified within-county data to construct profiles (see next step below).
 
 ## National Data
@@ -34,7 +36,7 @@ Healthier and wealthier areas appeared to be more successful at implementing soc
 ## NC County Analysis
 **Data Sources**<br>
 In this county-level analysis we will merge data from:
-1. Cell phone mobility data (updated daily with a 2-day lag) as proxy for overall social distancing
+1. Cell phone mobility data (updated daily with a 2-day lag) as proxy for overall social distancing (Courtesy Decartes Labs)
 2. Google changes in check-in data (Feb 16-March 29) by type of location (e.g., work, transit, etc.)
 3. County demographic profiles from American Community Survey and Census and [RWJF County Health Rankings](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2020_2.pdf)
 <br>We are in the process of merging and creating the master dataset.
@@ -52,8 +54,14 @@ The outputs from these analyses will be used to develop and test messages tailor
 <br>
 
 ## Preliminary analyses
-Social distancing as measured by percent change in cell phone mobility changes from baseline (February 17 to March 7, 2020) through the last available data (usually ~2 days ago).
-![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_mobility_change.png)
+Social distancing as measured by percent change in cell phone mobility changes from baseline (February 17 to March 7, 2020) through the last available data (usually ~2 days ago).<br>
+<br>
+
+### NC Maps
+Interactive NC County maps are currently [available here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC/Dashboard12)<br>
+![maps](https://opioiddatalab.github.io/covidnc/ncmobilitymaps.png)<br>
+### NC Timetrends
+![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_mobility_change.png)<br>
 
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
