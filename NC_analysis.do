@@ -1,13 +1,32 @@
-cd "/Users/nabarun/Documents/GitHub/covid/"
 
-// Import and save RUCC codes
+
+cd "/Users/nabarun/Documents/GitHub/covidnc/data"
+
+// Process Google app check-in data
 clear
-import excel "ruralurbancodes2013.xls", sheet("Rural-urban Continuum Code 2013") cellrange(A1:F3222) firstrow
-rename FIPS fips
-rename RUCC_2013 rucc
-drop Description County_Name State
-save rucc, replace
-
+import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/google_mobility-2020-03-29.csv" 
+	
+	drop v1
+	
+	ds, has(type numeric)
+	
+	foreach var of varlist `r(varlist)'  {
+		replace `var'=`var'*100
+		}
+	
+	rename subunit_name county
+		order county, a(date)
+			rename date dateoriginal
+				gen googledate=date(dateoriginal, "YMD")
+					format googledate %td
+						order googledate, first
+							drop dateoriginal
+		
+	keep if unit_name=="North Carolina"
+		drop unit_name
+		
+	save ncgoogle_mobility-2020-03-29, replace
+		
 // Import cell tower mobility data
 	clear
 	import delimited "https://raw.githubusercontent.com/descarteslabs/DL-COVID-19/master/DL-us-mobility-daterow.csv"
@@ -35,18 +54,20 @@ save rucc, replace
 				di "`latest'"
 			local earliest: disp %td r(min)
 				di "`'earliest'"
-			
-	/*
+				
 	* Basic graphs
 		la var m50 "Median daily distance traveled (km)"
-		la var m50_index "Median % reduction in mobility since Feb 17, 2020"
+		la var m50_index "Median % reduction in mobility since March 7, 2020"
 		la var date "Dates: `earliest' to `latest'"
-		line m50_index date, by(county)
+		line m50_index date, by(county) note("Baseline: Feb 17 to March 7, 2020")
 			graph export "/Users/nabarun/Documents/GitHub/covidnc/docs/nc_mobility_km.png", as(png) name("Graph") replace
-		line m50 date, by(county)
+		line m50 date, by(county) 
 			graph export "/Users/nabarun/Documents/GitHub/covidnc/docs/nc_mobility_change.png", as(png) name("Graph") replace
-*/
 
+	* Short county name
+			gen shortcounty=county
+				replace shortcounty=regexr(shortcounty, " County", "")
+			
 		* twoway lowess m50_index date, by(county)
 		
 	* Create last 3 day moving average of last 3 weekdays
@@ -57,10 +78,22 @@ save rucc, replace
 				by county: egen last3_pctchange=mean(m50_index) if weekdays >= lastweekday-2 & weekdays!=.
 
 		collapse (max) last3_m50 last3_pctchange last3_sample date (sum) samples, by(county fips)
-			la var last3_m50 "3-day moving average of median km traveled for last 3 weekdays"
-			la var last3_sample "Number of cell trace sample during last 3 weekdays"
-			la var last3_pctchange "Avg % change in median mobility since baseline (17Feb-07Mar) for last 3 weekdays"
+			la var last3_m50 "Median km traveled (last 3 weekdays)"
+			la var last3_sample "Number of cell trace samples during last 3 weekdays"
+			la var last3_pctchange "% change in median mobility since baseline"
+			note last3_pctchange: Baseline 17Feb to 07Mar; % change since then until last 3 weekdays
 			
+	* Merge in Google data
+		merge 1:1 county using ncgoogle_mobility-2020-03-29, keep(1 3) nogen
+			drop unit*
+			
+	* Merge in RUCC data
+	*	merge 1:1 fips using rucc, keep(1) nogen
+
+
+
+/*		
+** IN PROGRESS
 	program define quintile
 	
 	xtile temp = trend, nq(5)
@@ -74,12 +107,12 @@ save rucc, replace
 								la var iso5 "Social Distancing: Lowest (1) to Highest (5)"
 									drop temp
 end
-
+)*/
 	export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", delimiter(tab) replace
 
 	frame put all, into(master)
 
-// Import Google check-in data
+// Import Google check-in data - update with latest extract from Ben
 	clear
 	import delimited "/Users/nabarun/Documents/GitHub/covid/data/google_mobility-2020-03-29.csv"
 
