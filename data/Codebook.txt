@@ -1,0 +1,259 @@
+------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/nabarun/Documents/GitHub/covidnc/data/Codebook.txt
+  log type:  text
+ opened on:  13 Apr 2020, 10:12:42
+
+.                         codebook, h n
+
+               Dataset:  [unnamed]
+            Last saved:  never
+
+                 Label:  [none]
+   Number of variables:  14
+Number of observations:  97
+                  Size:  8,245 bytes ignoring labels, etc.
+
+_dta:
+  1.  Dataset for COVID-19 mobility analysis. Dataset created by N.
+      Dasgupta.
+
+------------------------------------------------------------------------
+county                                                       (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  string (str29), but longest is str19
+
+         unique values:  97                       missing "":  0/97
+
+              examples:  "Chatham County"
+                         "Granville County"
+                         "Mecklenburg County"
+                         "Rockingham County"
+
+               warning:  variable has embedded blanks
+
+------------------------------------------------------------------------
+fips                                                         (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (long)
+
+                 range:  [37001,37199]                units:  1
+         unique values:  97                       missing .:  0/97
+
+                  mean:   37099.5
+              std. dev:   58.3362
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                             37019     37049     37101     37149     371
+> 81
+
+------------------------------------------------------------------------
+last3_m50                           Median km traveled (last 3 weekdays)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [.25466669,15.599999]        units:  1.000e-08
+         unique values:  96                       missing .:  0/97
+
+                  mean:   5.05924
+              std. dev:    2.8233
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                             1.919   3.23033   4.67867   6.49067   8.850
+> 67
+
+------------------------------------------------------------------------
+last3_pctchange               % change in median mobility since baseline
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [3,80.666664]                units:  1.000e-07
+         unique values:  71                       missing .:  0/97
+
+                  mean:   41.3952
+              std. dev:   15.0372
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                                22   30.3333        44   52.3333   57.33
+> 33
+
+last3_pctchange:
+  1.  Baseline 17Feb to 07Mar; % change since then until last 3 weekdays
+
+------------------------------------------------------------------------
+last3_sample         Number of cell trace samples during last 3 weekdays
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [310,62746]                  units:  1
+         unique values:  97                       missing .:  0/97
+
+                  mean:   6145.94
+              std. dev:   9265.18
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                               542      1347      3109      6569     128
+> 47
+
+------------------------------------------------------------------------
+date                                                          (max) date
+------------------------------------------------------------------------
+
+                  type:  numeric daily date (float)
+
+                 range:  [21984,22015]                units:  1
+       or equivalently:  [10mar2020,10apr2020]        units:  days
+         unique values:  2                        missing .:  0/97
+
+            tabulation:  Freq.  Value
+                             1  21984  10mar2020
+                            96  22015  10apr2020
+
+------------------------------------------------------------------------
+samples                                                    (sum) samples
+------------------------------------------------------------------------
+
+                  type:  numeric (double)
+
+                 range:  [515,889813]                 units:  1
+         unique values:  97                       missing .:  0/97
+
+                  mean:   86705.4
+              std. dev:    132197
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                              7397     19009     42845     91444    1840
+> 66
+
+------------------------------------------------------------------------
+googledate                                                   (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric daily date (float)
+
+                 range:  [22010,22010]                units:  1
+       or equivalently:  [05apr2020,05apr2020]        units:  days
+         unique values:  1                        missing .:  1/97
+
+            tabulation:  Freq.  Value
+                            96  22010  05apr2020
+                             1  .              .
+
+------------------------------------------------------------------------
+subunit_work                                                 (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [-58,-14]                    units:  1.000e-06
+         unique values:  31                       missing .:  1/97
+
+                  mean:    -34.25
+              std. dev:   7.38704
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                               -42       -38       -34       -30       -
+> 26
+
+------------------------------------------------------------------------
+subunit_parks                                                (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [-58.999996,81]              units:  1.000e-06
+         unique values:  27                       missing .:  61/97
+
+                  mean:   2.66667
+              std. dev:    30.971
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                               -27       -18       -11        19        
+> 40
+
+------------------------------------------------------------------------
+subunit_retail                                               (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [-75,-11]                    units:  1.000e-06
+         unique values:  37                       missing .:  5/97
+
+                  mean:  -38.0109
+              std. dev:   11.6492
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                               -53       -46       -36       -29       -
+> 25
+
+------------------------------------------------------------------------
+subunit_grocery                                              (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [-45,47]                     units:  1.000e-06
+         unique values:  24                       missing .:  47/97
+
+                  mean:    -13.12
+              std. dev:   15.5769
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                             -26.5       -20       -16       -12      10
+> .5
+
+------------------------------------------------------------------------
+subunit_transit                                              (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [-77,-13]                    units:  1.000e-06
+         unique values:  25                       missing .:  64/97
+
+                  mean:  -39.5152
+              std. dev:   17.1776
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                               -70       -46       -39       -27       -
+> 22
+
+------------------------------------------------------------------------
+subunit_residential                                          (unlabeled)
+------------------------------------------------------------------------
+
+                  type:  numeric (float)
+
+                 range:  [10,19]                      units:  1.000e-06
+         unique values:  10                       missing .:  41/97
+
+                  mean:   13.3393
+              std. dev:   2.58159
+
+           percentiles:        10%       25%       50%       75%       9
+> 0%
+                                10        11        13        15        
+> 17
+
+.                                 log close
+      name:  <unnamed>
+       log:  /Users/nabarun/Documents/GitHub/covidnc/data/Codebook.txt
+  log type:  text
+ closed on:  13 Apr 2020, 10:12:42
+------------------------------------------------------------------------

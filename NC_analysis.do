@@ -122,8 +122,10 @@ import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/export-2020-04-05
 end
 )*/
 
-
-export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", delimiter(comma) replace
-
-
+// Save file for export and codebook
+export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", replace
 	
+note: Dataset for COVID-19 mobility analysis. Dataset created by N. Dasgupta.
+		log using "Codebook.txt", text replace
+			codebook, h n
+				log close
