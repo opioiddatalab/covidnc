@@ -43,19 +43,28 @@ Based on the county-level analysis above, we will identify candidate profiles of
 The outputs from these analyses will be used to develop and test messages tailored to audience segmentation.<br>
 <br>
 
-## Preliminary analyses
-Social distancing as measured by percent change in cell phone mobility changes from baseline (February 17 to March 7, 2020) through the last available data (usually ~2 days ago).<br>
+## NC Maps
+As a *proxy for trends in social distancing*, we can analyze changes in movement using location information from cell phones, usually including data from the last 2 days. These data are aggregated and anonymized, so we cannot identify any individuals.
 <br>
 
-### NC Maps
-Interactive NC County map dashboard [available here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC-Updated413/Dashboard1)<br>
-![maps](https://opioiddatalab.github.io/covidnc/ncmobilitymaps.png)<br>
+**[Interactive NC cell tower mobility maps](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC-Updated413/Dashboard1)** from aggregated and anonymized data (Data courtesy of Descartes Labs, Santa Fe, NM)
+<br>
 
+See our [data, code, and methods](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md)
+<br>
+![maps](https://opioiddatalab.github.io/covidnc/ncmobilitymaps.png)<br>
+<br>
+**[Interactive NC location maps](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/shared/CN3HH2ZQY) using Google Location Services**
+<br>
+See our [data, code, and methods](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md)
+<br>
+![maps](https://github.com/opioiddatalab/covidnc/blob/master/docs/googlemobilitymaps.png)
+<br>
 ### NC Timetrends
 ![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_mobility_change.png)<br>
 
 ### NC Rank Tables
-[Click here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/ComparingQuintilesbyCounty-Updated413/Dashboard2) for interactive tables
+Check out the [interactive tables](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/ComparingQuintilesbyCounty-Updated413/Dashboard2)
 ![preliminarytable](https://opioiddatalab.github.io/covidnc/ncmobilitytable.png)
 
 # 2. Initial Messsage Resonnance Testing
