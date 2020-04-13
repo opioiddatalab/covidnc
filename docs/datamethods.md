@@ -19,4 +19,7 @@ Google [mobility data](https://www.google.com/covid19/mobility/) are extracted f
 + [Commuting flows (Table 2)](https://www.census.gov/data/tables/2015/demo/metro-micro/commuting-flows-2015.html) between counties
 
 # Analysis
-*We are looking for your suggestions on how to analyze the data, including what explanatory variables would be of interest. While we want to adjust for explanatory variables **
+
+*We are looking for your suggestions on how to analyze the data, including what explanatory variables would be of interest. While we want to adjust for explanatory variables, we are careful not to draw causal conclusions with this analytic setup. We are interested in explantory modeling here.*
+
+If you have suggestions, please describe them here as a contributor by editing this document.
