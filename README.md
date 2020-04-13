@@ -34,13 +34,7 @@ Healthier and wealthier areas appeared to be more successful at implementing soc
 ![March 2 to March 20, 2020 social distancing, US](https://opioiddatalab.github.io/covidnc/figure1.png)
 
 ## NC County Analysis
-**Data Sources**<br>
-In this county-level analysis we will use data from cell phone tower mobility data as proxy for overall social distancing (Courtesy Decartes Labs), and Google location services data by type of location (e.g., work, transit, etc.). Additional data from socioeconomic and transportation sources are being added. [Click here](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md) for methods, data, and code.
-
-**Analysis plan**<br>
-We will first identify NC counties with lower social distancing intensity, measured as both: 1) change from baseline, and 2) total mobility. Adjustments for county-level confounders will also be considered. We will also generate county-level demographic profiles for lower social distancing areas.
-<br>
-These profiles will be provided to Spectrum for analysis to refine profiles.
+In this county-level analysis we will use data from cell phone tower mobility data as proxy for overall social distancing (Courtesy Decartes Labs), and Google location services data by type of location (e.g., work, transit, etc.). Additional data from socioeconomic and transportation sources are being added. [Click here](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md) for methods, code, data, and codebook. We will first identify NC counties with lower social distancing intensity, measured as both: 1) change from baseline, and 2) total mobility. Adjustments for county-level confounders will also be considered. We will also generate county-level demographic profiles for lower social distancing areas. These profiles will be provided to Spectrum for analysis to refine profiles.
 <br>
 ## NC sub-county demographic profiles
 *Conduct a demographically stratified analysis to generate profiles*<br>
@@ -54,10 +48,15 @@ Social distancing as measured by percent change in cell phone mobility changes f
 <br>
 
 ### NC Maps
-Interactive NC County maps are currently [available here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC/Dashboard12)<br>
+Interactive NC County map dashboard [available here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC-Updated413/Dashboard1)<br>
 ![maps](https://opioiddatalab.github.io/covidnc/ncmobilitymaps.png)<br>
+
 ### NC Timetrends
 ![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_mobility_change.png)<br>
+
+### NC Rank Tables
+[Click here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/ComparingQuintilesbyCounty-Updated413/Dashboard2) for interactive tables
+![preliminarytable](https://opioiddatalab.github.io/covidnc/ncmobilitytable.png)
 
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
