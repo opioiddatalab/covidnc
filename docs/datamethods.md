@@ -11,3 +11,12 @@ Google [mobility data](https://www.google.com/covid19/mobility/) are extracted f
 [Analytic dataset](https://github.com/opioiddatalab/covidnc/blob/master/data/nc_cell_tower_data_collapsed.csv)<br>
 [Codebook](https://github.com/opioiddatalab/covidnc/blob/master/data/Codebook.txt)<br>
 
+**Explanatory Datasets Available**<br>
++ USDA [Rural-Urban Contiuum Codes](https://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx)
++ RWJF County Health Ranking with dozens of health and socioeconomic indicators: [measurements](https://www.countyhealthrankings.org/sites/default/files/media/document/Trends%20documentation%202020.pdf) and [data dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2020_2.pdf)
++ [American Community Survey](https://data.census.gov/cedsci/table?q=DP02%3A%20SELECTED%20SOCIAL%20CHARACTERISTICS%20IN%20THE%20UNITED%20STATES&hidePreview=true&tid=ACSDP1Y2018.DP02&g=0400000US37.050000&moe=false) demographic, in
++ Agriculture data 
++ [Commuting flows (Table 2)](https://www.census.gov/data/tables/2015/demo/metro-micro/commuting-flows-2015.html) between counties
+
+# Analysis
+*We are looking for your suggestions on how to analyze the data, including what explanatory variables would be of interest. While we want to adjust for explanatory variables **
