@@ -121,31 +121,9 @@ import delimited "/Users/nabarun/Documents/GitHub/covidnc/data/export-2020-04-05
 									drop temp
 end
 )*/
-	export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", delimiter(tab) replace
 
-	frame put all, into(master)
 
-// Import Google check-in data - update with latest extract from Ben
-	clear
-	import delimited "/Users/nabarun/Documents/GitHub/covid/data/google_mobility-2020-03-29.csv"
+export delimited using "/Users/nabarun/Documents/GitHub/covidnc/data/nc_cell_tower_data_collapsed.csv", delimiter(comma) replace
 
-	* keep NC
-		keep if unit_name=="North Carolina"
-	
-	* Date format
-		rename date dateoriginal
-			gen date=date(dateoriginal, "YMD")
-				format date %td
-					order date, first
-						drop dateoriginal
-	
-	* format to percent
-		replace subunit_work=subunit_work*100
-	
-		hist  subunit_work
-		
-		rename subunit_name county
-	
-		keep county sub
-	
+
 	
