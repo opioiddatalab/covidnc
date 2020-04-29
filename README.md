@@ -17,24 +17,14 @@ Analyses by: Nabarun Dasgupta, Allison Lazard, Katherine Gora Combs<br>
 We are using cell phone tower mobility data as a proxy for social distancing. [Data](https://github.com/descarteslabs/DL-COVID-19) are provided by Decartes Labs (Santa Fe, NM), based on [this methodology](https://www.descarteslabs.com/wp-content/uploads/2020/03/mobility-v097.pdf). An example analysis was published on March 23, 2020 in *The New York Times*. These data are aggregated at the county level, so while we can compare general demographics, we would ideally also have more stratified within-county data to construct profiles (see next step below).
 
 ## National Data
-Based on a national analysis conducted at UNC, we found that counties that were the fastest to implement social distancing were healthier and wealthier. We conclude that economic considerations should be considered in social distancing messaging.<br>
+Based on a [national analysis conducted at UNC](https://opioiddatalab.github.io/covid/locationcovid.html), we found that counties that were the fastest to implement social distancing were healthier and wealthier. We conclude that economic considerations should be considered in social distancing messaging.<br>
 
-**ABSTRACT** ([details](https://opioiddatalab.github.io/covid/locationcovid.html))<br>
-Fast-tracked and out for review at *New England Journal of Medicine*<br>
-<br>
-**Introduction**<br>
-Faced with a pandemic caused by a novel coronavirus, social distancing became a normative countermeasure in March 2020, which may be measured using aggregate mobile phone data. We explored if healthier and wealthier places were more successful at implementing social distancing.<br>
-**Methods**<br>
-We used smartphone GPS positioning data to quantify social distancing in 2,507 counties in the United States, from March 2 to March 20, 2020. Social distancing was modeled as 5-level quintiles. Linkage to eight healthcare and economic indicators at the county level allowed us to evaluate associations with the intensity of social distancing as measured by smartphone GPS movement. <br>
-**Results**<br>
-From 02-March to 20-March 2020, smartphone movement decreased by 35% (quintile range: 5%, 68%) in the US. There was considerable disparity in access to primary care: the lowest social distancing counties had 47.6 (95% CI: 45.2, 50.0) per 100,000, whereas the most social distancing counties had 72.3 (95% CI: 65.5, 72.3). Counties in the highest quintile of social distancing had: 51% higher mental health providers, 70% fewer uninsured, 13% higher influenza vaccination, 31% higher annual income, and 10% less income disparity, relative to the lowest quintile.<br>
-**Conclusions**<br>
-Healthier and wealthier areas appeared to be more successful at implementing social distancing. This disparity may have implications for disease incidence and risk stratification.<br>
+> From 02-March to 20-March 2020, smartphone movement decreased by 35% (quintile range: 5%, 68%) in the US. There was considerable disparity in access to primary care: the lowest social distancing counties had 47.6 (95% CI: 45.2, 50.0) per 100,000, whereas the most social distancing counties had 72.3 (95% CI: 65.5, 72.3). Counties in the highest quintile of social distancing had: 51% higher mental health providers, 70% fewer uninsured, 13% higher influenza vaccination, 31% higher annual income, and 10% less income disparity, relative to the lowest quintile.<br>
 
 ![March 2 to March 20, 2020 social distancing, US](https://opioiddatalab.github.io/covidnc/figure1.png)
 
 ## NC County Analysis
-In this county-level analysis we will use data from cell phone tower mobility data as proxy for overall social distancing (Courtesy Decartes Labs), and Google location services data by type of location (e.g., work, transit, etc.). Additional data from socioeconomic and transportation sources are being added. [Click here](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md) for methods, code, data, and codebook. We will first identify NC counties with lower social distancing intensity, measured as both: 1) change from baseline, and 2) total mobility. Adjustments for county-level confounders will also be considered. We will also generate county-level demographic profiles for lower social distancing areas. These profiles will be provided to Spectrum for analysis to refine profiles.
+In this county-level analysis we use data from cell phone tower mobility data as proxy for overall social distancing (Courtesy Decartes Labs), and Google location services data by type of location (e.g., work, grocery, transit, etc.). Additional data from socioeconomic and transportation sources are being added. [Click here](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md) for methods, code, data, and codebook. We will first identify NC counties with lower social distancing intensity, measured as both: 1) change from baseline, and 2) total mobility. Adjustments for county-level confounders will also be considered. We will also generate county-level demographic profiles for lower social distancing areas. These profiles will be provided to Spectrum for analysis to refine profiles.
 <br>
 ## NC sub-county demographic profiles
 *Conduct a demographically stratified analysis to generate profiles*<br>
@@ -43,20 +33,30 @@ Based on the county-level analysis above, we will identify candidate profiles of
 The outputs from these analyses will be used to develop and test messages tailored to audience segmentation.<br>
 <br>
 
-## Preliminary analyses
-Social distancing as measured by percent change in cell phone mobility changes from baseline (February 17 to March 7, 2020) through the last available data (usually ~2 days ago).<br>
+## NC Maps
+As a *proxy for trends in social distancing*, we can analyze changes in movement using location information from cell phones, usually including data from the last 2 days. These data are aggregated and anonymized, so we cannot identify any individuals.
 <br>
 
-### NC Maps
-Interactive NC County map dashboard [available here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC-Updated413/Dashboard1)<br>
-![maps](https://opioiddatalab.github.io/covidnc/ncmobilitymaps.png)<br>
+**[Interactive NC cell tower mobility maps](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/SocialDistancinginNC-Updated413/Dashboard1)** from aggregated and anonymized data (Data courtesy of Descartes Labs, Santa Fe, NM)
+<br>
 
+See our [data, code, and methods](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md)
+<br>
+![maps](https://opioiddatalab.github.io/covidnc/ncmobilitymaps.png)<br>
+<br>
+**[Interactive NC location maps](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/shared/CN3HH2ZQY) using Google Location Services**
+<br>
+See our [data, code, and methods](https://github.com/opioiddatalab/covidnc/blob/master/docs/datamethods.md)
+<br>
+![maps](https://github.com/opioiddatalab/covidnc/blob/master/docs/googlemobilitymaps.png)
+<br>
 ### NC Timetrends
 ![prelimaryresults](https://opioiddatalab.github.io/covidnc/nc_mobility_change.png)<br>
 
 ### NC Rank Tables
-[Click here](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/ComparingQuintilesbyCounty-Updated413/Dashboard2) for interactive tables
-![preliminarytable](https://opioiddatalab.github.io/covidnc/ncmobilitytable.png)
+Check out the [interactive tables](https://public.tableau.com/profile/katherine.gora.combs4747#!/vizhome/ComparingQuintilesbyCounty-Updated413/Dashboard2)
+<br>
+![table2](https://github.com/opioiddatalab/covidnc/blob/master/docs/ncmobilitytable.png)
 
 # 2. Initial Messsage Resonnance Testing
 *Use Amazon's Mechanical Turk (mTurk) to conduct rapid surveys in NC to test general messaging approaches.*<br>
